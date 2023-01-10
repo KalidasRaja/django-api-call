@@ -10,7 +10,6 @@ def user(request):
     }
     body ={
         "storageTypeId": [
-            '3353a653-f8c2-411b-a6d0-bc6b9e20c8fd'
         ],
         "locationId": [],
         "buildingId": []
