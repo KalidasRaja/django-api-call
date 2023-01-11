@@ -1,0 +1,39 @@
+{% load tailwind_tags static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tw-elements.min.css' %}">
+    <!-- Animation Css is here   -->
+    <link rel="stylesheet" href="{% static 'css/animation_aos.min.css' %}">
+    <!--  Font-family styles goes here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'css/font-family.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dist/style.css' %}">
+</head>
+<body>
+
+    {% include 'header.html' %}
+    {% block content %}
+
+    {% endblock %}
+    {% include 'footer.html' %}
+
+
+    <script src="{% static 'css/base.js' %}"></script>
+    <!--  Animation Js is here  -->
+    <script src="{% static 'js/animation_aos.min.js' %}"></script>
+    <script>
+          AOS.init();
+    </script>
+    <!-- Tailwind Elements Js is here   -->
+    <script src="{% static 'js/tailwind-elements.min.js' %}"></script>
+    <script src="{% static 'node_modules/tw-elements/dist/js/index.min.js' %}"></script>
+</body>
+</html>

@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apiCallApp',
-    'apiCallApp2'
+    'apiCallApp2',
+    # Tailwind css Configuration here
+    'tailwind',
+    'api_theme',
+    'django_browser_reload'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Tailwind css Configuration here
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'apiCallSetting.urls'
@@ -56,7 +62,7 @@ ROOT_URLCONF = 'apiCallSetting.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,13 +125,27 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Algolia django core setup key here
 
 ALGOLIA = {
     'APPLICATION_ID': 'E262GTSHGZ',
     'API_KEY': 'b063d38866678d3ce168944d4604a67d'
 }
 
+# Tailwind css Configuration here
+TAILWIND_APP_NAME = 'api_theme'
+
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"

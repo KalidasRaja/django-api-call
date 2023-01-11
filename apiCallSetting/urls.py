@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apiCallApp.urls')),
-    path('app2/', include('apiCallApp2.urls'))
+    path('app2/', include('apiCallApp2.urls')),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
