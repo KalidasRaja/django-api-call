@@ -8,9 +8,7 @@
     "build:clean": "rimraf ../static/css/dist",
     "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ./src/styles.css -o ../static/css/dist/styles.css --minify",
     "dev": "cross-env NODE_ENV=development tailwindcss --postcss -i ./src/styles.css -o ../static/css/dist/styles.css -w",
-    "tailwindcss": "node ./node_modules/tailwindcss/lib/cli.js",
-//    "start_js": "npm run dev_js",
-//    "dev_js": "cross-env NODE_ENV=development tailwindcss --postcss -i ./src/index.js -o ../static/css/dist/index.js -w"
+    "tailwindcss": "node ./node_modules/tailwindcss/lib/cli.js"
   },
   "keywords": [],
   "author": "",

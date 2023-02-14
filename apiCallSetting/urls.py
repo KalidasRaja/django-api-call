@@ -18,7 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apiCallApp.urls')),
-    path('app2/', include('apiCallApp2.urls')),
+    path('app1', include('apiCallApp.urls')),
+    path('', include('apiCallApp2.urls')),
+    path('listing', include('apiCallAppListing.urls')),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

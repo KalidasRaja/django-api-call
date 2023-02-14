@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apiCallApp',
     'apiCallApp2',
+    'apiCallAppListing',
     # Tailwind css Configuration here
     'tailwind',
     'api_theme',
